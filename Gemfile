@@ -7,6 +7,7 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
 gem 'dropzonejs-rails'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.13', '< 0.5'
