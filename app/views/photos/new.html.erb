@@ -1,0 +1,9 @@
+<%= form_for @photo, html: { multipart: true, class: 'dropzone', id: 'my-dropzone'} do |f| %>
+	<div class='dz-message needsclick'>
+		<h1> Drop Files Here</h1>
+	</div>
+	<div class='fallback'>
+		<%= f.file_field :image %>
+		<%= f.submit 'Upload Image' %>
+	</div>
+<% end %>
