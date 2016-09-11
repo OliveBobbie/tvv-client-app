@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require dropzone
+//= require angular
+//= require angular-animate
+//= require app
 //= require_tree .

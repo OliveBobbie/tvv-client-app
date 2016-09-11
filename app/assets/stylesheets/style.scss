@@ -1,0 +1,38 @@
+body{
+	background-color: black;
+	div{
+		background-color: white;
+	}
+	.ng-enter, .ng-move{
+	  -webkit-animation: fadeIn 1s;
+	  -moz-animation: fadeIn 1s;
+	  -o-animation: fadeIn 1s;
+	  animation: fadeIn 1s;
+	}
+
+	.ng-leave{
+	  -webkit-animation: fadeOut 1s;
+	  -moz-animation: fadeOut 1s;
+	  -o-animation: fadeOut 1s;
+	  animation: fadeOut 1s;
+	}
+}
+
+.navbar{
+	height: auto;
+	max-width: 100%;
+	background-color: grey;
+	color: white;
+	box-shadow: 0 0 13px rgba(0, 0, 0, 0.6);
+	border-radius: 5px;
+	padding: 1%;
+	#brand{
+		position: relative;
+	}
+	#nav-logo{
+		max-width: 100%;
+		height: auto; 
+		display: block;
+	}
+}
+
