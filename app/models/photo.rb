@@ -11,7 +11,6 @@ class Photo < ActiveRecord::Base
 											:s3_region => 'us-east-1',
 											:url => 's3_domain_url'
 										}
-
-
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+	belongs_to :category
 end
