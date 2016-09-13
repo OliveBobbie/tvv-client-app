@@ -1,11 +1,22 @@
-<%= form_for @photo, html: { multipart: true, class: 'dropzone', id: 'my-dropzone'} do |f| %>
-	<div class='dz-message needsclick'>
-		<h1> Drop Files Here</h1>
+<div ng-app='app'>
+	<div ng-controller='photosCtrl' ng-init='setup()'>
+		<%= form_for Photo.new, html: { multipart: true, class: 'dropzone', id: 'my-dropzone'} do |f| %>
+			<div>
+				<%= f.label :title %>
+				<%= f.text_field :title %>
+			</div>
+			<div>
+				<%= f.label :date %>
+				<%= f.text_field :date %>
+			</div>
+			<div class='dz-message' id='dz-upload-box'>
+				<h1> Drop Files Here</h1>
+			</div>
+			<div class='fallback'>
+				<%= f.file_field :image %>
+				<%= f.submit 'Upload Image' %>
+			</div>
+			<div><%= submit_tag 'submit', id: 'submitBtn' %></div>
+		<% end %>
 	</div>
-	<div class='fallback'>
-		<%= f.file_field :image %>
-		<%= f.submit 'Upload Image' %>
-	</div>
-<% end %>
-
-<div ng-app='app'>{{ 1+1 }}</div>
+</div>
